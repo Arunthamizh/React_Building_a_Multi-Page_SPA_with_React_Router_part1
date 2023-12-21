@@ -1,6 +1,7 @@
 import { Route , Routes, Outlet} from 'react-router-dom'
 import Welcome from './components/Welcome';
 import Products from './components/Products';
+import MainHeader from './components/MainHeader';
 // import Routers from './components/Route';
 
 
@@ -16,10 +17,13 @@ function App() {
       {/* <Outlet /> */}
       {/* <Routers /> */}
 
-      <Routes>
-           <Route path="/welcome" element={<Welcome/>}/>
-           <Route path="/Products" element={<Products/>} />
-      </Routes>
+      <MainHeader/>
+      <main>
+        <Routes>
+            <Route path="/welcome" element={<Welcome/>}/>
+            <Route path="/Products" element={<Products/>} />
+        </Routes>
+      </main>
 
       
     </div>
