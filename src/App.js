@@ -1,7 +1,8 @@
 import { Route , Routes, Outlet} from 'react-router-dom'
-import Welcome from './components/Welcome';
-import Products from './components/Products';
+import Welcome from './pages/Welcome';
+import Products from './pages/Products';
 import MainHeader from './components/MainHeader';
+import ProductDetails from './pages/ProductDetails';
 // import Routers from './components/Route';
 
 
@@ -21,7 +22,8 @@ function App() {
       <main>
         <Routes>
             <Route path="/welcome" element={<Welcome/>}/>
-            <Route path="/Products" element={<Products/>} />
+            <Route path="/products" element={<Products/>} />
+            <Route path="/product-details/:productId" element={<ProductDetails/>} />
         </Routes>
       </main>
 
