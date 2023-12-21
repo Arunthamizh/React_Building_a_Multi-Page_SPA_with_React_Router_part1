@@ -1,4 +1,4 @@
-import { Route , Routes, Outlet} from 'react-router-dom'
+import { Route , Routes} from 'react-router-dom'
 import Welcome from './pages/Welcome';
 import Products from './pages/Products';
 import MainHeader from './components/MainHeader';
@@ -22,8 +22,8 @@ function App() {
       <main>
         <Routes>
             <Route path="/welcome" element={<Welcome/>}/>
-            <Route path="/products" element={<Products/>} />
-            <Route path="/product-details/:productId" element={<ProductDetails/>} />
+            <Route path="/products" element={<Products/>} exact />
+            <Route path="/products/:productId" element={<ProductDetails/>} />
         </Routes>
       </main>
 
