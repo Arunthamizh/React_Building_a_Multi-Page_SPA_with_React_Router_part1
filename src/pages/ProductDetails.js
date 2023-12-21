@@ -1,8 +1,14 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 function ProductDetails() {
+    const params = useParams()
   return (
-    <div>ProductDetails</div>
+    <section>
+        <div>ProductDetails</div>
+        {/* // ! getting(extracting) the query params using useParams() react hook */}
+        <p>{params.productId}</p> 
+    </section>
   )
 }
 
